@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import CounterParent from "./counter";
 
+
+  
 function App() {
+
+
+
+  const obj=[
+    {name :"Html" , title:"tags"},
+    {name :"Bootstrap" , title:"Colors"},
+    {name :"Javascript" , title:"Functions"},
+    {name :"React" , title:"components"},
+
+  ]
+
+  // const [state, setstate] = useState(0);
+
+
+
+  // const incrementCounter = () => {
+  //   setstate(state + 1);
+
+  // }
+
+  // const decrementCounter = () => {
+  //   setstate(state - 1);
+  // }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      {/* <CounterParent onClickIncrement={incrementCounter} value={state} onClickDecrement={decrementCounter} /> */}
+      <CounterParent value={obj} />
+      
+
+      
     </div>
   );
 }
